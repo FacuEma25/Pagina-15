@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+US+Trad+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --header-font: "Oswald";
+    --font-general: "Poppins";
+    --principal: #1f2732;
+    --menu: #e9e6e6;
+    --secundario: #e7e7dd;
+    --letra: #1f2732;
+    --celeste: #2bf1ff;
+    --violeta: #e100ff;
+    --marron: #92734f;
+}
+
+/*Auto scrol*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+section[id]{
+    scroll-margin-top: 70px;
+}
+
+body{
+    background-color: var(--menu);
+    color: var(--letra);
+}
+
+img{
+    max-width: 100%;
+}
+
+/*Tamaño de contenedor general, cambiar individualmete si lo necesito*/
+
+.container{
+    max-width: 1100px;
+    /*0 arriba y abajo - Izq y der automatico al centro*/
+    margin: 0 auto;
+}
+
+.container-2{
+    max-width: 1300px;
+    /*0 arriba y abajo - Izq y der automatico al centro*/
+    margin: 0 auto;
+}
+
+/*Menu-Barra*/
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    background-color: var(--menu);
+}
+
+.menu .logo{
+    padding: 0 70px;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--letra);
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    color: var(--letra);
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color: var(--violeta);
+}
+
+/*Todo esto es para cuando se despliegue la version de celular*/
+#menu{
+    /*Para q no aparezca el INPUT*/
+    display: none;
+}
+
+.menu-icon{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+/* DIV HEADER */
+
+header{
+    background-image: linear-gradient( rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) ), url(img/Portada.png);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.tittle-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.title-header{
+    color: var(--menu);
+    padding: 0 150px;
+}
+
+.title-header h1{
+    font-size: 3rem;
+    font-family: var(--header-font);
+    padding-right: 200px;
+    line-height: 3rem;
+    padding-bottom: 30px;
+}
+
+.title-header p{
+    padding-right: 120px;
+    padding-bottom: 20px;
+}
+
+.title-header .header-btn{
+    background-color: var(--menu);
+    color: var(--letra);
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.header-btn:hover{
+    background-color: var(--celeste);
+    color: var(--letra);
+}
+
+/* SERVICIOS */
+.services-content{
+    display: flex;
+    /* margin: 150px auto; */
+    text-align: center;
+    gap: 50px;
+    position: relative;
+    top: -120px;
+}
+
+.services-1{
+    color: var(--menu);
+    text-align: center;
+    background-color: var(--principal);
+    position: relative;
+}
+
+.services-1 i{
+    font-size: 50px;
+    background-color: var(--menu);
+    color: var(--principal);
+    border-radius: 50%;
+    padding: 25px;
+    position: absolute;
+    top: -50px;
+    right: 140px;
+    transition: .3s;
+}
+
+.services-1 h2{
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-family: var(--header-font);
+    font-size: 2rem;
+}
+
+.services-1 p{
+    padding: 0 50px 30px 50px;
+}
+
+/* .services-1:hover h2{
+    transform: scale(1.2);
+    color: var(--marron);
+    transform: translateY(-10px);
+}
+
+.services-1:hover i{
+    background-color: var(--letra);
+    color: var(--menu);
+} */
+
+/* SERVICIOS */
+.work{
+    background-color: #ccc6c6;
+    padding-bottom: 10px;
+    padding: 100px 0;
+}
+
+.work-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin: 150px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.work h2{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--header-font);
+}
+
+.work-p{
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.work-1{
+    display: flex;
+    text-align: left;
+}
+
+.work-1 i{
+    font-size: 30px;
+    background-color: var(--letra);
+    color: var(--menu);
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-1 a{
+    background-color: var(--principal);
+    color: var(--secundario);
+    padding: 10px;
+    transition: .3s;
+}
+
+.work-1 a:hover{
+    background-color: var(--marron);
+    color: var(--letra);
+}
+
+.work-text{
+    padding-left: 10px;
+}
+
+.work-text p{
+    padding-bottom: 15px;
+}
+
+
+/* AUTO */
+.vehicule-text{
+    background-image: linear-gradient( rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) ), url(img/autos1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.vehicule-text h2{
+    font-family: var(--header-font);
+    font-size: 3.5rem;
+}
+
+.vehicule-text p{
+    padding: 0 500px;
+}
+
+/* PRECIOS */
+.precios-content{
+    margin: 100px auto;
+}
+
+.precios-content .precios-tittle{
+    text-align: center;
+    padding: 25px 0;
+    font-family: var(--header-font);
+    font-size: 3rem;
+}
+
+.precios-line{
+    background-color: var(--letra);
+    height: 3px;
+    width: 250px;
+    position: relative;
+    top: -20px;
+    margin: 0 auto 25px auto;
+}
+
+.precios-1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.pres-conten{
+    background-color:#ccc6c6;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.pres-conten:hover{
+    border: 1px solid var(--principal);
+}
+
+.tittle-precios i{
+    color: var(--letra);
+    font-size: 50px;
+    padding: 20px;
+}
+
+.tittle-precios h2{
+    padding-bottom: 5px;
+}
+
+.tittle-precios  p{
+    padding-bottom: 25px;
+}
+
+.tittle-precios a{
+    background-color: var(--letra);
+    color: var(--menu);
+    padding: 10px;
+}
+
+.text-precios{
+    padding-top: 35px;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.text-precios p{
+    padding: 10px 0;
+}
+
+.si-cover::before{
+    content: '✓';
+    padding-right: 10px;
+}
+
+.no-cover{
+    text-decoration: line-through;
+    color: grey;
+}
+
+.no-cover::before{
+    content: '*';
+    padding-right: 10px;
+    
+
+}
+
+
+/* DIV FOOTER */
+/**DIV FOOTER - Info y redes sociales*/
+
+.footer-info{
+    padding: 50px;
+    text-align: center;
+    background-color: var(--menu);
+}
+
+.footer-info1{
+    display: flex;
+    text-align: left;
+    gap: 250px;
+    justify-content: center;
+}
+
+.footer-text p{
+    font-size: 1.1rem;
+}
+
+/*Redes sociales*/
+
+.footer-redes1{
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.footer-redes1 a{
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: var(--letra);
+    color: var(--menu);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+}
+
+.footer-redes1 a:hover{
+    transform: scale(1.2);
+    background-color: var(--menu);
+    color: var(--letra);
+}
+
+/**FOOTER**/
+footer{
+    text-align: center;
+    background-color: var(--letra);
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    gap: 50px;
+}
+
+footer a{
+    font-family: var(--menu);
+    text-decoration: none;
+    color: var(--secundario);
+}
+
+footer i{
+    margin: 0 auto;
+}
+
+footer p{
+    color: var(--secundario);
+    font-size: 1rem;
+}
