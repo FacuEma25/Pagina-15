@@ -241,6 +241,8 @@ header{
 .work-1{
     display: flex;
     text-align: left;
+    border: 1px solid var(--letra);
+    padding-bottom: 25px;
 }
 
 .work-1 i{
@@ -329,6 +331,7 @@ header{
     background-color:#ccc6c6;
     text-align: center;
     border-radius: 20px;
+    border: 1px solid var(--secundario);
 }
 
 .pres-conten:hover{
